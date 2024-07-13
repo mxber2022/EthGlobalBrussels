@@ -3,7 +3,8 @@ import argparse
 import py_nillion_client as nillion
 import os
 import pytest
-
+import json
+from web3 import Web3, EthereumTesterProvider
 from py_nillion_client import NodeKey, UserKey
 from dotenv import load_dotenv
 from cosmpy.aerial.client import LedgerClient
@@ -95,6 +96,114 @@ async def main(args=None):
         store_ids.append(store_id)
         party_ids.append(party_id_n)
 
+        infura_url = 'https://sepolia.infura.io/v3/e96abcff2f494bcd81fadc53c8fd6ac9'
+        web3 = Web3(Web3.HTTPProvider(infura_url))
+        network_id = web3.net.version 
+        print(f"Connected to network with ID: {network_id}")
+        contract_address = '0xA7d8553FeF67Bcb187FCD6F76cf672a4e6B40262'
+        contract_abi = json.loads('''
+[
+    {
+        "inputs": [],
+        "name": "getUUIDs",
+        "outputs": [
+            {
+                "internalType": "string[]",
+                "name": "",
+                "type": "string[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_uuid",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_secretName",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_partyName",
+                "type": "string"
+            }
+        ],
+        "name": "addRecord",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_uuid",
+                "type": "string"
+            }
+        ],
+        "name": "getRecord",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_uuid",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_newSecretName",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_newPartyName",
+                "type": "string"
+            }
+        ],
+        "name": "updateRecord",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]'''
+)
+        contract = web3.eth.contract(address=contract_address, abi=contract_abi)
+        transaction = contract.functions.addRecord(store_id, secret_name, party_name).build_transaction({
+        'from': "0x7199D548f1B30EA083Fe668202fd5E621241CC89",
+        'nonce': web3.eth.get_transaction_count("0x7199D548f1B30EA083Fe668202fd5E621241CC89"),
+        'gas': 2000000,
+        'gasPrice': web3.to_wei('50', 'gwei')
+        })
+        signed_tx = web3.eth.account.sign_transaction(transaction, "d2ab6e77539c6d2ba90f19b217e26e4fad301e5066445514b4b63cba0fc80b6c")
+        tx_hash = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+        web3.eth.wait_for_transaction_receipt(tx_hash)
+
         print(
             f"\n🎉 {party_name} stored {secret_name}: {secret_value} at store id: {store_id}"
         )
@@ -119,3 +228,6 @@ if __name__ == "__main__":
 @pytest.mark.asyncio
 async def test_main():
     pass
+
+
+
