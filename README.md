@@ -14,3 +14,6 @@
 nillion-devnet --seed my-seed
 
 45
+
+0x629Fb566FD8f318d6c5E2559f55C80Dbb73F92E3 - orbit
+http://localhost:8449/
