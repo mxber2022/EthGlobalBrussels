@@ -9,3 +9,4 @@
 6: Good
 7: Very Good
 8: Excellent
+9: fire
