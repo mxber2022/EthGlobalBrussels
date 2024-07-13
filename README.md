@@ -10,3 +10,5 @@
 7: Very Good
 8: Excellent
 9: fire
+
+nillion-devnet --seed my-seed
