@@ -12,3 +12,5 @@
 9: fire
 
 nillion-devnet --seed my-seed
+
+45

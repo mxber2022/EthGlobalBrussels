@@ -124,18 +124,8 @@ async def main(args=None):
         if isinstance(compute_event, nillion.ComputeFinishedEvent):
             print(f"✅  Compute complete for compute_id {compute_event.uuid}")
             print(f"🖥️  The output result is {compute_event.result.value}")
-
-            # The compute result is an index
-            # Map it to the corresponding party name who should pay for lunch
-            # ['Alice', 'Bob', 'Charlie']
-            my_parties = CONFIG_N_PARTIES
-            my_parties.insert(0, CONFIG_PARTY_1)
-            richest_party = my_parties[compute_event.result.value["largest_position"]][
-                "party_name"
-            ]
-            print(f"The richest friend is {richest_party}")
-            return richest_party
-
+            temp = compute_event.result.value["largest_position"]/3
+            print(f"🖥️  The overall performance is {temp}")
 
 if __name__ == "__main__":
     asyncio.run(main())

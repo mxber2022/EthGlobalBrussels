@@ -6,14 +6,11 @@ def nada_main():
     bob = Party(name="Bob")  # party 1
     charlie = Party(name="Charlie")  # party 2
 
-    alice_salary = SecretInteger(Input(name="alice_salary", party=alice))
-    bob_salary = SecretInteger(Input(name="bob_salary", party=bob))
-    charlie_salary = SecretInteger(Input(name="charlie_salary", party=charlie))
+    alice_fed = SecretInteger(Input(name="alice_feedback", party=alice))
+    bob_fed = SecretInteger(Input(name="bob_feedback", party=bob))
+    charlie_fed = SecretInteger(Input(name="charlie_feedback", party=charlie))
 
-    largest_position = (alice_salary > bob_salary).if_else(
-        (alice_salary > charlie_salary).if_else(Integer(0), Integer(2)),
-        (bob_salary > charlie_salary).if_else(Integer(1), Integer(2)),
-    )
+    largest_position = (alice_fed + bob_fed + charlie_fed)
 
     out = Output(largest_position, "largest_position", alice)
 
