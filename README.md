@@ -19,9 +19,56 @@ Welcome to the Blind Feedback App! This application enables multiple parties to 
 3. **Sentiment Analysis**: User feedback is analyzed using an AI model to determine sentiment.
 
 
-## Arbitrum orbit chain details
-0x629Fb566FD8f318d6c5E2559f55C80Dbb73F92E3 - smartcontract
-http://localhost:8449/ - rpc
+## Smart Contract Deployment
+
+### Arbitrum Orbit Chain Details
+
+- **Smart Contract Address**: `0x629Fb566FD8f318d6c5E2559f55C80Dbb73F92E3`
+- **RPC URL**: `http://localhost:8449/`
+
+### Arbitrum Sepolia
+- **Smart Contract Address**: `0x60155DF180066aD68ee39D64B5AeBF1440971Ccf`
+- **RPC URL**: `https://sepolia-rollup.arbitrum.io/rpc`
+
+### Sepolia
+- **Smart Contract Address**: `0xA7d8553FeF67Bcb187FCD6F76cf672a4e6B40262`
+- **RPC URL**: `https://sepolia.infura.io/v3/e96abcff2f494bcd81fadc53c8fd6ac9`
+
+### Zircuit 
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://zircuit1.p2pify.com/`
+
+### Base sepolia 
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+
+
+### Flare
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+### Inco Network
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+### Morph
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+### Scroll
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+### Zerion
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+### Vara
+- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
+- **RPC URL**: `https://sepolia.base.org`
+
+
 
 ## Rating Scale
 

@@ -97,6 +97,8 @@ async def main(args=None):
         party_ids.append(party_id_n)
 
         infura_url = 'https://sepolia.infura.io/v3/e96abcff2f494bcd81fadc53c8fd6ac9'
+        # zircuit - https://zircuit1.p2pify.com/
+        # base sepolia - https://sepolia.base.org
         web3 = Web3(Web3.HTTPProvider(infura_url))
         network_id = web3.net.version 
         print(f"Connected to network with ID: {network_id}")
