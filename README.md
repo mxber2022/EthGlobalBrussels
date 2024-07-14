@@ -55,8 +55,8 @@ http://localhost:8449/ - rpc
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/anonymous-survey-sentiment-app.git
-   cd anonymous-survey-sentiment-app
+   git clone https://github.com/mxber2022/EthGlobalBrussels
+   cd EthGlobalBrussels
    ```
 
 2. **Install Dependencies**
@@ -69,17 +69,8 @@ http://localhost:8449/ - rpc
 
    Create a `.env` file in the root directory and add your configurations:
 
-   ```env
-   NILLION_API_KEY=your_nillion_api_key
-   ORBIT_API_KEY=your_orbit_api_key
-   AI_MODEL_PATH=path_to_your_ai_model
-   ```
-
 4. **Run the Application**
 
-   ```bash
-   npm start
-   ```
 
 ### Usage
 
