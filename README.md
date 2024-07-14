@@ -39,6 +39,11 @@ Welcome to the Blind Feedback App! This application enables multiple parties to 
 0x629Fb566FD8f318d6c5E2559f55C80Dbb73F92E3 - smartcontract
 http://localhost:8449/ - rpc
 
+## Acknowledgements
+- Nillion for the secure computation network
+- Orbit for the blockchain technology
+- Hugging Face for the AI sentiment analysis models
+
 ## Getting Started
 
 ### Prerequisites
