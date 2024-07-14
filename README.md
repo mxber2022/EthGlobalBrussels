@@ -42,12 +42,6 @@ Welcome to the Blind Feedback App! This application enables multiple parties to 
 - **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
 - **RPC URL**: `https://sepolia.base.org`
 
-
-
-### Flare
-- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
-- **RPC URL**: `https://sepolia.base.org`
-
 ### Inco Network
 - **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
 - **RPC URL**: `https://sepolia.base.org`
@@ -57,8 +51,8 @@ Welcome to the Blind Feedback App! This application enables multiple parties to 
 - **RPC URL**: `https://sepolia.base.org`
 
 ### Scroll
-- **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
-- **RPC URL**: `https://sepolia.base.org`
+- **Smart Contract Address**: `0x1f9865e12615FCAB52d7c1E04117A4aB54F0BE9b`
+- **RPC URL**: `https://sepolia-rpc.scroll.io`
 
 ### Zerion
 - **Smart Contract Address**: `0x2E61762970Ed685ae91c8aCa27D7E926C67f1662`
