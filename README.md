@@ -1,21 +1,5 @@
 # EthGlobalBrussels
  
-0: Terrible
-1: Poor
-2: Bad
-3: Mediocre
-4: Fair
-5: Average
-6: Good
-7: Very Good
-8: Excellent
-9: fire
-
-nillion-devnet --seed my-seed
-
-45
-
-
 # Blind Feedback
 
 Welcome to the Blind Feedback App! This application enables multiple parties to submit anonymous ratings and uses blind computation to determine the average rating. Additionally, it employs an AI model to analyze user sentiment. Essential information such as store ID and party names is securely stored on the Orbit blockchain for reference and perform data analysis.
@@ -38,6 +22,19 @@ Welcome to the Blind Feedback App! This application enables multiple parties to 
 ## Arbitrum orbit chain details
 0x629Fb566FD8f318d6c5E2559f55C80Dbb73F92E3 - smartcontract
 http://localhost:8449/ - rpc
+
+## Rating Scale
+
+- **0**: Terrible
+- **1**: Poor
+- **2**: Bad
+- **3**: Mediocre
+- **4**: Fair
+- **5**: Average
+- **6**: Good
+- **7**: Very Good
+- **8**: Excellent
+- **9**: Fire
 
 ## Acknowledgements
 - Nillion for the secure computation network
